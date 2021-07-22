@@ -34,10 +34,12 @@
 	boolean result = userDAO.loginSign(NewUser.getUserID(), NewUser.getUserPassword());
 	if(result){
 		PrintWriter script = response.getWriter();
+		userDAO.setUserInfo(NewUser);
 		session.setAttribute("userID", NewUser.getUserID());
+		session.setAttribute("nickName", NewUser.getNickName());
 		script.println("<script>");
 		script.println("alert('로그인 성공!')");
-		script.println("location.href ='UseDb.jsp'");
+		script.println("location.href ='main.jsp'");
 		script.println("</script>");
 		script.close();
 		return;

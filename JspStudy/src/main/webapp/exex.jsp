@@ -1,6 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
@@ -18,13 +15,6 @@
 	<style>
 	@import url('https://fonts.googleapis.com/css?family=Numans');
 
-html,body{
-background-color: 
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
-font-family: 'Numans', sans-serif;
-}
 
 .container{
 height: 100%;
@@ -106,7 +96,9 @@ margin-left: 4px;
 	</style>
 </head>
 <body>
-<div class="container">
+<header class="masthead text-center text-white">
+            <div class="masthead-content">
+               <div class="container">
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
@@ -133,7 +125,7 @@ margin-left: 4px;
 						<input type="password" class="form-control" placeholder="userPassword" name="userPassword">
 					</div>
 					<div class="row align-items-center remember">
-						<input type="checkbox">ÀúÀåÇÏ±â
+						<input type="checkbox">ì €ì¥í•˜ê¸°
 					</div>
 					<div class="form-group">
 						<input type="submit" value="Login" class="btn float-right login_btn">
@@ -142,14 +134,22 @@ margin-left: 4px;
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					¾ÆÁ÷ °¡ÀÔÇÏÁö ¾ÊÀ¸¼Ì³ª¿ä?<a href="signUp.jsp">È¸¿ø°¡ÀÔ</a>
+					ì•„ì§ ê°€ì…í•˜ì§€ ì•Šìœ¼ì…¨ë‚˜ìš”?<a href="signUp.jsp">íšŒì›ê°€ì…</a>
 				</div>
 				<div class="d-flex justify-content-center">
-					<a href="#">ºñ¹Ğ¹øÈ£°¡ »ı°¢³ªÁö ¾Ê¾Æ¿ä</a>
+					<a href="#">ë¹„ë°€ë²ˆí˜¸ê°€ ìƒê°ë‚˜ì§€ ì•Šì•„ìš”</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+                    <a class="btn btn-primary btn-xl rounded-pill mt-5" href="#scroll">PROJECT</a>
+                </div>
+            </div>
+            <div class="bg-circle-1 bg-circle"></div>
+            <div class="bg-circle-2 bg-circle"></div>
+            <div class="bg-circle-3 bg-circle"></div>
+            <div class="bg-circle-4 bg-circle"></div>
+        </header>
 </body>
 </html>

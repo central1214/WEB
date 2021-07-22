@@ -22,8 +22,8 @@ public class UserDAO {
 // 쿼리문의 ?안에 각각의 데이터를 넣어준다. 
 			pstmt.setString(1, userID);
 			pstmt.setString(2, userPassword);
-			pstmt.setString(3, email);
-			pstmt.setString(4, nickName);
+			pstmt.setString(3, nickName);
+			pstmt.setString(4, email);
 // 명령어를 수행한 결과 반환, 반환값: insert가 된 데이터의 개수 
 			return pstmt.executeUpdate();
 		} catch (Exception e) {
@@ -59,6 +59,22 @@ public class UserDAO {
 			
 		}
 		return false;
+	}
+	public void setUserInfo(UserDTO userDTO) {
+		String SQL = "SELECT * FROM sys.userTBl WHERE USERID='"+ userDTO.getUserID() + "'";
+		try {
+		Statement stmt = conn.createStatement();
+		rs = stmt.executeQuery(SQL);
+		while(rs.next()) {
+			userDTO.setUserPassword(rs.getString(2));
+			userDTO.setNickName(rs.getString(3));
+			userDTO.setEmail(rs.getString(4));
+		}
+		
+		} catch(Exception e) {
+			
+		}
+		
 	}
 }
 
