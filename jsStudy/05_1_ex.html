@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 float="left">태어난 연도 입력</h1>
+    <input id="year" type="text">
+    <button onclick="gogo()">확인</button>
+    <img id="jisin" src="">
+    <h1 float="left">태어난 월 입력</h1>
+    <input id="month" type="text">
+    <button onclick="gigi()">확인</button>
+    <img id="season" src="">
+    
+    
+
+    <script>
+        function gogo() {
+            let birth = Number(document.getElementById('year').value) % 12
+            console.log(birth)
+            let ganzi = document.getElementById('jisin')
+            switch (birth) {
+                case 0:
+                    ganzi.src = '0.png'
+                    break
+                case 1:
+                    ganzi.src = '1.png'
+                    break
+                case 2:
+                    ganzi.src = '2.png'
+                    break
+                case 3:
+                    ganzi.src = '3.png'
+                    break
+                case 4:
+                    ganzi.src = '4.png'
+                    break
+                case 5:
+                    ganzi.src = '5.png'
+                    break
+                case 6:
+                    ganzi.src = '6.png'
+                    break
+                case 7:
+                    ganzi.src = '7.png'
+                    break
+                case 8:
+                    ganzi.src = '8.png'
+                    break
+                case 9:
+                    ganzi.src = '9.png'
+                    break
+                case 10:
+                    ganzi.src = '10.png'
+                    break
+                case 11:
+                    ganzi.src = '11.png'
+                    break
+                
+
+
+
+            }
+        }
+        function gigi(){
+            let mon = Number(document.getElementById('month').value) 
+            let sea = document.getElementById('season')
+            console.log(mon)
+            if(mon > 11){
+                sea.src = 'winter.jpg'
+            }
+            else if(mon > 8){
+                sea.src = 'fall.jpg'
+            }
+            else if(mon > 5){
+                sea.src = 'summer.jpg'
+            }
+            else if(mon > 2){
+                sea.src = 'spring.jpg'
+            }
+            else{
+                sea.src = 'winter.jpg'
+            }
+
+        }
+    </script>
+</body>
+
+</html>

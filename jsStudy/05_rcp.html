@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            float: left;
+        }
+        .imgs{
+            width: 300px;
+            height: 300px;
+        }
+       
+       
+    
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><img class='imgs' src='man.jpg'></td>
+            <td align="center"><h1>  VS  </h1></td>
+            <td><img class='imgs' src='computer.jpg'></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="rock" align="center"><button><img src="rock.png" onclick="start('rock')"></button></td>
+            <td class="scissors" align="center"><button><img src="scissors.png" onclick="start('scissors')"></button></td>
+            <td class="paper" align="center"><button><img src="paper.png" onclick="start('paper')"></button></td>
+        </tr>
+        <tr>
+            <td class="rcp" align="center"><img id="man" src=""></td>
+            <td class="result" align="center"></td>
+            <td class="rcp" align="center"><img id="ai" src=""></td>
+        </tr>
+    </table>
+   
+    
+   
+   
+    <script>
+        function start(param){
+            const computer = Math.floor(Math.random() * 3) 
+            let ais =document.getElementById('ai')
+            
+            switch(param){
+                case 'rock':
+                var mans =document.getElementById('man')
+                mans.src = 'rock.png' 
+                
+                switch(computer){
+                    case 0:
+                    ais.src = 'rock.png' 
+                    document.getElementsByClassName('result')[0].innerHTML = "무승부"
+                    break
+                    case 1:
+                    ais.src = 'scissors.png' 
+                    document.getElementsByClassName('result')[0].innerHTML = "인류 승리"
+                    break
+                    case 2:
+                    ais.src = 'paper.png' 
+                    document.getElementsByClassName('result')[0].innerHTML = "인류 패배"
+                    break
+                }
+                break
+
+                case 'scissors':
+                var mans =document.getElementById('man')
+                mans.src = 'scissors.png' 
+                
+                switch(computer){
+                    case 0:
+                    ais.src = 'rock.png' 
+                    document.getElementsByClassName('result')[0].innerHTML = "인류 패배"
+                    break
+                    case 1:
+                    ais.src = 'scissors.png' 
+                    document.getElementsByClassName('result')[0].innerHTML = "무승부"
+                    break
+                    case 2:
+                    ais.src = 'paper.png' 
+                    document.getElementsByClassName('result')[0].innerHTML = "인류 승리"
+                    break
+                }
+                break
+
+                case 'paper':
+                var mans =document.getElementById('man')
+                mans.src = 'paper.png' 
+                
+                switch(computer){
+                    case 0:
+                    ais.src = 'rock.png' 
+                    document.getElementsByClassName('result')[0].innerHTML = "인류 승리"
+                    break
+                    case 1:
+                    ais.src = 'scissors.png' 
+                    document.getElementsByClassName('result')[0].innerHTML = "인류 패배"
+                    break
+                    case 2:
+                    ais.src = 'paper.png' 
+                    document.getElementsByClassName('result')[0].innerHTML = "무승부"
+                    break
+                }
+                break
+            }
+            
+            
+            //Math.floor : 소수점 버림
+            //Math.floor : 0.0~1.0미만
+      
+        }
+    </script>
+</body>
+</html>
